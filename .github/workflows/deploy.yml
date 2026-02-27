@@ -1,0 +1,22 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avz --delete --exclude='.git*' --exclude='.github'
+          path: ./
+          remote_path: /home/u556106033/domains/solinger-schneidwaren-samstag.de/public_html/
+          remote_host: 145.223.114.221
+          remote_port: 65002
+          remote_user: u556106033
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}

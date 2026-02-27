@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufakturen | Solinger Schneidwaren Samstag</title>
+    <meta name="description" content="Kontakt und Anfahrt zu den teilnehmenden Solinger Manufakturen.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face { font-family: 'Poppins'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/poppins-400.woff2') format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-weight: 600; font-style: normal; font-display: swap; src: url('fonts/poppins-600.woff2') format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/poppins-700.woff2') format('woff2'); }
+        @font-face { font-family: 'Roboto'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/roboto-400.woff2') format('woff2'); }
+        @font-face { font-family: 'Roboto'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/roboto-700.woff2') format('woff2'); }
+    </style>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: { brand: '#c41e3a' },
+                fontFamily: {
+                    heading: ['Poppins', 'sans-serif'],
+                    body: ['Roboto', 'sans-serif'],
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        #mobile-menu.open { max-height: 300px; }
+        .contact-card { transition: box-shadow 0.3s ease; }
+        .contact-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="images/logo.jpg" alt="17. Solinger Schneidwaren Samstag" class="h-14 w-auto">
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="font-heading font-semibold text-sm uppercase tracking-wide text-gray-500 hover:text-brand transition-colors">Solsam</a>
+                    <a href="manufakturen.html" class="font-heading font-semibold text-sm uppercase tracking-wide text-brand">Manufakturen</a>
+                    <a href="galerie.html" class="font-heading font-semibold text-sm uppercase tracking-wide text-gray-500 hover:text-brand transition-colors">Galerie</a>
+                </div>
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden">
+                <div class="pb-4 space-y-3">
+                    <a href="index.html" class="block font-heading font-semibold text-sm uppercase tracking-wide text-gray-500">Solsam</a>
+                    <a href="manufakturen.html" class="block font-heading font-semibold text-sm uppercase tracking-wide text-brand">Manufakturen</a>
+                    <a href="galerie.html" class="block font-heading font-semibold text-sm uppercase tracking-wide text-gray-500">Galerie</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="bg-gray-50 py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="font-heading font-bold text-3xl sm:text-4xl text-gray-900 mb-3">Kontakt & Anfahrt</h1>
+            <p class="text-gray-500">Alle teilnehmenden Manufakturen auf einen Blick</p>
+        </div>
+    </section>
+
+    <!-- Karte -->
+    <section class="py-10 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <img src="images/stempelkarte.jpg" alt="Karte aller Standorte" class="w-full rounded-lg shadow">
+            <p class="text-center text-sm text-gray-500 mt-4">
+                <a href="https://www.google.com/maps/dir/Franz+G%C3%BCde+GmbH,+Katternberger+Stra%C3%9Fe+175,+42655+Solingen/Kretzer+Scheren+GmbH,+L%C3%B6hdorfer+Stra%C3%9Fe+171-173,+42699+Solingen/Robert+Herder+GmbH,+Ellerstra%C3%9Fe+16,+42697+Solingen/BECKER+Manicure+GmbH,+Friedrich-Wilhelm-Stra%C3%9Fe+18-22,+42655+Solingen/LVR-Industriemuseum+Gesenkschmiede+Hendrichs,+Merscheider+Str.+289-297,+42699+Solingen" target="_blank" rel="noopener" class="text-brand hover:underline">Alle 5 Stationen auf Google Maps anzeigen</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Kontaktkarten -->
+    <section class="py-12 sm:py-16">
+        <div class="max-w-4xl mx-auto px-4 space-y-6">
+
+            <!-- Güde -->
+            <div class="contact-card bg-gray-50 rounded-lg p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row gap-6 items-start">
+                    <div class="flex-shrink-0 w-32 h-20 flex items-center justify-center bg-white rounded p-3">
+                        <img src="images/guede.jpg" alt="Güde" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-heading font-bold text-xl text-gray-900">Güde</h2>
+                        <p class="text-sm text-gray-500 mb-3">Franz Güde GmbH</p>
+                        <div class="grid sm:grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+                            <div>
+                                <p>Katternberger Straße 175</p>
+                                <p>42655 Solingen</p>
+                            </div>
+                            <div>
+                                <p>Tel: <a href="tel:0212816166" class="hover:text-brand">0212 816166</a></p>
+                                <p><a href="mailto:info@guede-solingen.de" class="hover:text-brand">info@guede-solingen.de</a></p>
+                                <p><a href="https://www.guede-solingen.de/" target="_blank" rel="noopener" class="hover:text-brand">guede-solingen.de</a></p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="pdfs/guede-katalog.pdf" target="_blank" class="text-xs font-heading font-semibold text-brand hover:underline">Güde Katalog (PDF)</a>
+                            <span class="text-gray-300">|</span>
+                            <a href="https://www.google.com/maps/dir//Franz+G%C3%BCde+GmbH,+Katternberger+Stra%C3%9Fe+175,+42655+Solingen" target="_blank" rel="noopener" class="text-xs font-heading font-semibold text-brand hover:underline">Anfahrt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kretzer -->
+            <div class="contact-card bg-gray-50 rounded-lg p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row gap-6 items-start">
+                    <div class="flex-shrink-0 w-32 h-20 flex items-center justify-center bg-white rounded p-3">
+                        <img src="images/kretzer.jpg" alt="Kretzer" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-heading font-bold text-xl text-gray-900">Kretzer</h2>
+                        <p class="text-sm text-gray-500 mb-3">Kretzer Scheren GmbH</p>
+                        <div class="grid sm:grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+                            <div>
+                                <p>Löhdorfer Straße 171-173</p>
+                                <p>42699 Solingen</p>
+                            </div>
+                            <div>
+                                <p>Tel: <a href="tel:0212262350" class="hover:text-brand">0212 262350</a></p>
+                                <p><a href="mailto:info@kretzer.de" class="hover:text-brand">info@kretzer.de</a></p>
+                                <p><a href="https://www.kretzer.de/" target="_blank" rel="noopener" class="hover:text-brand">kretzer.de</a></p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="pdfs/kretzer-beruf.pdf" target="_blank" class="text-xs font-heading font-semibold text-brand hover:underline">Katalog Beruf</a>
+                            <span class="text-gray-300">|</span>
+                            <a href="pdfs/kretzer-textil.pdf" target="_blank" class="text-xs font-heading font-semibold text-brand hover:underline">Katalog Textil</a>
+                            <span class="text-gray-300">|</span>
+                            <a href="pdfs/kretzer-beauty.pdf" target="_blank" class="text-xs font-heading font-semibold text-brand hover:underline">Katalog Beauty</a>
+                            <span class="text-gray-300">|</span>
+                            <a href="https://www.google.com/maps/dir//Kretzer+Scheren+GmbH,+L%C3%B6hdorfer+Stra%C3%9Fe+171-173,+42699+Solingen" target="_blank" rel="noopener" class="text-xs font-heading font-semibold text-brand hover:underline">Anfahrt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Windmühlenmesser -->
+            <div class="contact-card bg-gray-50 rounded-lg p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row gap-6 items-start">
+                    <div class="flex-shrink-0 w-32 h-20 flex items-center justify-center bg-white rounded p-3">
+                        <img src="images/herder.jpg" alt="Windmühlenmesser" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-heading font-bold text-xl text-gray-900">Windmühlenmesser</h2>
+                        <p class="text-sm text-gray-500 mb-3">Robert Herder GmbH & Co. KG</p>
+                        <div class="grid sm:grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+                            <div>
+                                <p>Ellerstraße 16</p>
+                                <p>42697 Solingen</p>
+                            </div>
+                            <div>
+                                <p>Tel: <a href="tel:0212267050" class="hover:text-brand">0212 267050</a></p>
+                                <p><a href="mailto:contact@windmuehlenmesser.de" class="hover:text-brand">contact@windmuehlenmesser.de</a></p>
+                                <p><a href="https://www.windmuehlenmesser.de/" target="_blank" rel="noopener" class="hover:text-brand">windmuehlenmesser.de</a></p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://www.google.com/maps/dir//Robert+Herder+GmbH,+Ellerstra%C3%9Fe+16,+42697+Solingen" target="_blank" rel="noopener" class="text-xs font-heading font-semibold text-brand hover:underline">Anfahrt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Becker -->
+            <div class="contact-card bg-gray-50 rounded-lg p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row gap-6 items-start">
+                    <div class="flex-shrink-0 w-32 h-20 flex items-center justify-center bg-white rounded p-3">
+                        <img src="images/becker.jpg" alt="Becker Solingen" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-heading font-bold text-xl text-gray-900">BECKER Solingen</h2>
+                        <p class="text-sm text-gray-500 mb-3">BECKER Manicure GmbH & Co. KG</p>
+                        <div class="grid sm:grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+                            <div>
+                                <p>Friedrich-Wilhelm-Straße 18-22</p>
+                                <p>42655 Solingen</p>
+                            </div>
+                            <div>
+                                <p>Tel: <a href="tel:0212223340" class="hover:text-brand">0212 22 33 40</a></p>
+                                <p><a href="mailto:info@becker-solingen.de" class="hover:text-brand">info@becker-solingen.de</a></p>
+                                <p><a href="https://www.becker-solingen.de" target="_blank" rel="noopener" class="hover:text-brand">becker-solingen.de</a></p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://www.google.com/maps/dir//BECKER+Manicure+GmbH,+Friedrich-Wilhelm-Stra%C3%9Fe+18-22,+42655+Solingen" target="_blank" rel="noopener" class="text-xs font-heading font-semibold text-brand hover:underline">Anfahrt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LVR -->
+            <div class="contact-card bg-gray-50 rounded-lg p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row gap-6 items-start">
+                    <div class="flex-shrink-0 w-32 h-20 flex items-center justify-center bg-white rounded p-3">
+                        <img src="images/lvr-museum.jpg" alt="LVR-Industriemuseum" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-heading font-bold text-xl text-gray-900">LVR-Industriemuseum</h2>
+                        <p class="text-sm text-gray-500 mb-3">Gesenkschmiede Hendrichs</p>
+                        <div class="grid sm:grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+                            <div>
+                                <p>Merscheider Str. 289-297</p>
+                                <p>42699 Solingen</p>
+                            </div>
+                            <div>
+                                <p>Tel: <a href="tel:022349921555" class="hover:text-brand">02234 992 15 55</a></p>
+                                <p><a href="mailto:info@kulturinfo-rheinland.de" class="hover:text-brand">info@kulturinfo-rheinland.de</a></p>
+                                <p><a href="https://industriemuseum.lvr.de/de/die-museen/solingen---gesenkschmiede-hendrichs/solingen.html" target="_blank" rel="noopener" class="hover:text-brand">industriemuseum.lvr.de</a></p>
+                            </div>
+                        </div>
+                        <p class="text-sm font-bold text-gray-700 mb-3">Öffnungszeiten am Veranstaltungstag: 11:00 – 18:00 Uhr</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://www.google.com/maps/dir//LVR-Industriemuseum+Gesenkschmiede+Hendrichs,+Merscheider+Str.+289-297,+42699+Solingen" target="_blank" rel="noopener" class="text-xs font-heading font-semibold text-brand hover:underline">Anfahrt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-white">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <img src="images/logo.jpg" alt="Solinger Schneidwaren Samstag" class="h-10 w-auto">
+            <div class="flex items-center gap-6 text-sm text-gray-600">
+                <a href="impressum.html" class="hover:text-gray-900 transition-colors">Impressum</a>
+                <a href="datenschutz.html" class="hover:text-gray-900 transition-colors">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
