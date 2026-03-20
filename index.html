@@ -37,8 +37,8 @@
     ║                                                              ║
     ║  1. Event-Nummer:  18. (suche nach "18." im HTML)          ║
     ║  2. Datum:         05. September 2026                       ║
-    ║  3. Logo-Bild:     images/logo.jpg (neues Bild ersetzen)   ║
-    ║  4. Hero-Bild:     images/hero-bg.jpg (bei Bedarf)         ║
+    ║  3. Hero/Logo SVG: images/hero.svg (neue SVG ersetzen)      ║
+    ║  4. (hero-bg.jpg nicht mehr nötig — SVG wird verwendet)    ║
     ║  5. Stempelkarte:  pdfs/stempelkarte-2024.pdf              ║
     ║                    (neue PDF hochladen + Dateiname ändern)  ║
     ║                                                              ║
@@ -60,6 +60,7 @@
         .gallery-scroll::-webkit-scrollbar { display: none; }
         .manufacturer-card { transition: box-shadow 0.3s ease; }
         .manufacturer-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
@@ -69,7 +70,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between h-20">
                 <a href="index.html" class="flex-shrink-0">
-                    <img src="images/logo.jpg" alt="18. Solinger Schneidwaren Samstag" class="h-14 w-auto">
+                    <img src="images/hero.svg" alt="18. Solinger Schneidwaren Samstag" class="h-14 w-auto">
                 </a>
                 <div class="hidden md:flex items-center gap-8">
                     <a href="index.html" class="font-heading font-semibold text-sm uppercase tracking-wide text-brand">Solsam</a>
@@ -96,7 +97,7 @@
     <section class="py-12 sm:py-16" style="background-color: #DFDFDF;">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h1 class="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-gray-900 mb-8">Handwerk und Tradition - Made in Germany!</h1>
-            <img src="images/hero-bg.jpg" alt="18. Solinger Schneidwaren Samstag - 05.09.2026 - 9:00 bis 16:00 Uhr" class="w-full max-w-3xl mx-auto">
+            <img src="images/hero.svg" alt="18. Solinger Schneidwaren Samstag - 05.09.2026 - 9:00 bis 16:00 Uhr" class="w-full max-w-3xl mx-auto">
         </div>
     </section>
 
@@ -278,7 +279,7 @@
     <!-- Footer -->
     <footer class="py-10 bg-white">
         <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <img src="images/logo.jpg" alt="Solinger Schneidwaren Samstag" class="h-10 w-auto">
+            <img src="images/hero.svg" alt="Solinger Schneidwaren Samstag" class="h-10 w-auto">
             <div class="flex items-center gap-6 text-sm text-gray-600">
                 <a href="impressum.html" class="hover:text-gray-900 transition-colors">Impressum</a>
                 <a href="datenschutz.html" class="hover:text-gray-900 transition-colors">Datenschutz</a>
