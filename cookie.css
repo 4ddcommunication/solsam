@@ -1,42 +1,66 @@
+.ssam-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(17, 24, 39, 0.25);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.ssam-overlay[hidden] {
+    display: none;
+}
+
+.ssam-overlay.ssam-visible {
+    opacity: 1;
+}
+
+html.ssam-lock,
+html.ssam-lock body {
+    overflow: hidden;
+}
+
 .ssam-card {
     font-family: 'Roboto', sans-serif;
-    position: fixed;
-    left: 16px;
-    bottom: 16px;
-    z-index: 999999;
-    max-width: 360px;
+    width: 100%;
+    max-width: 420px;
     background: #fff;
     border-radius: 14px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
-    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    padding: 24px;
     max-height: calc(100vh - 32px);
     max-height: calc(100dvh - 32px);
     overflow-y: auto;
     font-size: 14px;
     line-height: 1.5;
     color: #1f2937;
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+    transform: translateY(8px) scale(0.98);
+    transition: transform 0.2s ease-out;
 }
 
-.ssam-card.ssam-visible {
-    opacity: 1;
+.ssam-overlay.ssam-visible .ssam-card {
     transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .ssam-overlay,
     .ssam-card {
         transition: none;
     }
 }
 
 @media (max-width: 480px) {
+    .ssam-overlay {
+        padding: 12px;
+    }
     .ssam-card {
-        left: 8px;
-        right: 8px;
-        bottom: 8px;
-        max-width: none;
+        padding: 20px;
     }
 }
 

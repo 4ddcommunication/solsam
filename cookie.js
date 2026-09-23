@@ -15,7 +15,7 @@
     var PRIVACY = '/datenschutz';
     var IMPRINT = '/impressum';
 
-    var banner, layer1, layer2, gaLoaded = false;
+    var banner, overlay, layer1, layer2, gaLoaded = false;
 
     /* ---------- Cookie ---------- */
 
@@ -126,7 +126,8 @@
 
     function markup() {
         return '' +
-        '<div id="ssam-banner" class="ssam-card" role="dialog" aria-modal="false" aria-label="Cookie-Einwilligung" hidden>' +
+        '<div id="ssam-overlay" class="ssam-overlay" hidden>' +
+        '<div id="ssam-banner" class="ssam-card" role="dialog" aria-modal="true" aria-label="Cookie-Einwilligung">' +
         '  <div id="ssam-layer1">' +
         '    <div class="ssam-head"><strong>Cookies &amp; Datenschutz</strong></div>' +
         '    <p class="ssam-text">Wir setzen essenzielle Cookies f&uuml;r den Betrieb dieser Website ein. Mit Ihrer Einwilligung messen wir zus&auml;tzlich die Seitennutzung mit Google&nbsp;Analytics. Ihre Auswahl k&ouml;nnen Sie jederzeit &auml;ndern.</p>' +
@@ -162,6 +163,7 @@
         '    </div>' +
         '    <p class="ssam-note">Die Einwilligung ist freiwillig und l&auml;sst sich jederzeit &uuml;ber den Link &bdquo;Cookie-Einstellungen&ldquo; im Fu&szlig;bereich &auml;ndern oder widerrufen.</p>' +
         '  </div>' +
+        '</div>' +
         '</div>';
     }
 
@@ -173,17 +175,19 @@
             var box = document.getElementById('ssam-opt-statistik');
             if (box) box.checked = !!(current && current.c && current.c.statistik);
         }
-        banner.hidden = false;
+        overlay.hidden = false;
+        document.documentElement.classList.add('ssam-lock');
         requestAnimationFrame(function () {
-            banner.classList.add('ssam-visible');
+            overlay.classList.add('ssam-visible');
             var btn = banner.querySelector(settings ? '#ssam-save' : '#ssam-accept');
             if (btn) btn.focus({ preventScroll: true });
         });
     }
 
     function hide() {
-        banner.classList.remove('ssam-visible');
-        banner.hidden = true;
+        overlay.classList.remove('ssam-visible');
+        overlay.hidden = true;
+        document.documentElement.classList.remove('ssam-lock');
     }
 
     function init() {
@@ -191,6 +195,7 @@
         wrap.innerHTML = markup();
         document.body.appendChild(wrap.firstChild);
 
+        overlay = document.getElementById('ssam-overlay');
         banner = document.getElementById('ssam-banner');
         layer1 = document.getElementById('ssam-layer1');
         layer2 = document.getElementById('ssam-layer2');
@@ -209,6 +214,13 @@
         });
         document.getElementById('ssam-back').addEventListener('click', function () {
             show(false);
+        });
+
+        overlay.addEventListener('click', function (ev) {
+            if (ev.target === overlay && readCookie()) hide();
+        });
+        document.addEventListener('keydown', function (ev) {
+            if (ev.key === 'Escape' && !overlay.hidden && readCookie()) hide();
         });
 
         document.addEventListener('click', function (ev) {
