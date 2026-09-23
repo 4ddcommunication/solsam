@@ -9,7 +9,7 @@
 (function () {
     'use strict';
 
-    var GA_ID = 'G-XXXXXXXXXX';
+    var GA_ID = 'G-W660QT9VM0';
     var BANNER_VERSION = '1';
     var COOKIE = 'ssam_consent';
     var PRIVACY = '/datenschutz';
