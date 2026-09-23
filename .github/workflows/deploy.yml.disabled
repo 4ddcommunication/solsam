@@ -1,3 +1,5 @@
+# DEAKTIVIERT 2026-09-23: zeigte auf den alten Hostinger-Server. Live liegt seit 07/2026 auf dem
+# Güde-Hetzner (ssh guede, /home/solinger-schneidwaren-samstag.de/public_html). Deploy per rsync von Hand.
 name: Deploy to Hostinger
 
 on:

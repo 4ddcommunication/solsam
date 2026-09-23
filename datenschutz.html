@@ -36,6 +36,8 @@
         #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
         #mobile-menu.open { max-height: 300px; }
     </style>
+    <link rel="stylesheet" href="cookie.css">
+    <script src="cookie.js" defer></script>
 </head>
 <body class="bg-white text-gray-800 antialiased">
 
@@ -85,13 +87,32 @@
 
                 <div>
                     <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">2. Allgemeines zur Datenverarbeitung</h2>
-                    <p>Diese Webseite ist eine rein statische Informationsseite. Wir erheben, verarbeiten und speichern grundsätzlich keine personenbezogenen Daten beim Besuch dieser Webseite. Es werden keine Cookies gesetzt, keine Tracking-Tools eingesetzt und keine Formulare bereitgestellt.</p>
+                    <p>Diese Website ist eine Informationsseite ohne Formulare und ohne Kundenkonto. Personenbezogene Daten verarbeiten wir nur in dem Umfang, der in den folgenden Abschnitten beschrieben ist: beim Abruf der Seiten durch unseren Hoster (Server-Log-Dateien) sowie, sofern Sie einwilligen, zur statistischen Auswertung der Seitennutzung mit Google Analytics.</p>
                 </div>
 
                 <hr class="border-gray-200">
 
                 <div>
-                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">3. Hosting</h2>
+                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">3. Cookies und Einwilligung</h2>
+                    <p>Beim ersten Besuch fragt ein Hinweis am unteren Bildschirmrand, ob Sie der statistischen Auswertung Ihrer Seitennutzung zustimmen. Ohne Ihre Einwilligung wird kein Analysedienst geladen und kein entsprechendes Cookie gesetzt.</p>
+                    <p class="mt-3">Ihre Entscheidung speichern wir für zwölf Monate in dem Cookie <code>ssam_consent</code> in Ihrem Browser. Es enthält Ihre Auswahl, den Zeitpunkt, die Version des Hinweises und eine zufällig erzeugte Kennung, mit der sich die erteilte Einwilligung nachweisen lässt. Rückschlüsse auf Ihre Person sind damit nicht möglich. Dieses Cookie ist für den Betrieb der Website erforderlich, weil es Ihre Entscheidung festhält (Art. 6 Abs. 1 lit. f DSGVO, § 25 Abs. 2 Nr. 2 TDDDG).</p>
+                    <p class="mt-3">Sie können Ihre Auswahl jederzeit über den Link „Cookie-Einstellungen“ im Fußbereich jeder Seite ändern oder widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt.</p>
+                    <div class="ssam-status" data-ssam-status></div>
+                </div>
+
+                <hr class="border-gray-200">
+
+                <div>
+                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">4. Google Analytics</h2>
+                    <p>Mit Ihrer Einwilligung nutzen wir Google Analytics 4, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics setzt die Cookies <code>_ga</code> und <code>_ga_*</code> (Speicherdauer bis zu zwei Jahre), mit denen sich Ihre Nutzung der Website statistisch auswerten lässt, etwa welche Seiten aufgerufen werden und wie lange ein Besuch dauert.</p>
+                    <p class="mt-3">Die dabei erzeugten Informationen werden an Server von Google übertragen, auch in die USA. Google LLC ist nach dem EU-US Data Privacy Framework zertifiziert; für die Übermittlung gelten zudem die Standardvertragsklauseln der Europäischen Kommission. Google Analytics 4 speichert keine IP-Adressen. Sie dienen lediglich der groben Standortbestimmung und werden anschließend verworfen. Die Aufbewahrungsdauer der Nutzerdaten in Google Analytics ist auf 14 Monate eingestellt.</p>
+                    <p class="mt-3">Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Sie können die Einwilligung jederzeit über die Cookie-Einstellungen widerrufen. Google Analytics wird dann abgeschaltet und die genannten Cookies werden gelöscht. Weitere Informationen finden Sie in der <a href="https://policies.google.com/privacy" class="text-brand hover:underline" rel="noopener" target="_blank">Datenschutzerklärung von Google</a> und in den <a href="https://support.google.com/analytics/answer/6004245" class="text-brand hover:underline" rel="noopener" target="_blank">Hinweisen von Google zur Datennutzung in Google Analytics</a>.</p>
+                </div>
+
+                <hr class="border-gray-200">
+
+                <div>
+                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">5. Hosting</h2>
                     <p>Diese Webseite wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Webseite erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Webseite generiert werden, handeln.</p>
                     <p class="mt-3">Der Einsatz des Hosters erfolgt im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).</p>
                 </div>
@@ -99,7 +120,7 @@
                 <hr class="border-gray-200">
 
                 <div>
-                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">4. Server-Log-Dateien</h2>
+                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">6. Server-Log-Dateien</h2>
                     <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>
                     <ul class="list-disc list-inside mt-3 space-y-1">
                         <li>Browsertyp und Browserversion</li>
@@ -115,16 +136,16 @@
                 <hr class="border-gray-200">
 
                 <div>
-                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">5. Externe Links</h2>
+                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">7. Externe Links</h2>
                     <p>Unsere Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
                 </div>
 
                 <hr class="border-gray-200">
 
                 <div>
-                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">6. Ihre Rechte</h2>
+                    <h2 class="font-heading font-semibold text-lg text-gray-900 mb-3">8. Ihre Rechte</h2>
                     <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</p>
-                    <p class="mt-3">Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.</p>
+                    <p class="mt-3">Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden. Daneben haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, für uns zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
                 </div>
 
             </div>
@@ -138,6 +159,7 @@
             <div class="flex items-center gap-6 text-sm text-gray-600">
                 <a href="/impressum" class="hover:text-gray-900 transition-colors">Impressum</a>
                 <a href="/datenschutz" class="text-gray-800">Datenschutz</a>
+                <a href="#cookie-einstellungen" class="hover:text-gray-900 transition-colors">Cookie-Einstellungen</a>
             </div>
         </div>
     </footer>
