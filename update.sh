@@ -12,7 +12,7 @@
 #  - Meta-Titel & -Descriptions (automatisch)
 #  - Alt-Texte der Bilder
 #
-#  NICHT automatisch: Logo-Bild & Hero-Bild (manuell ersetzen)
+#  NICHT automatisch: Logo images/hero.svg (manuell ersetzen, gilt für alle Seiten)
 # ═══════════════════════════════════════════════════════════════
 
 set -e
@@ -123,13 +123,14 @@ echo ""
 echo "Automatische Änderungen abgeschlossen!"
 echo ""
 echo "MANUELLE SCHRITTE:"
-echo "  1. Neues Logo ersetzen:  images/logo.jpg"
-echo "  2. Neues Hero-Bild:     images/hero-bg.jpg (falls nötig)"
-echo "  3. Stempelkarte PDF:    pdfs/stempelkarte-${CURRENT_YEAR}.pdf"
+echo "  1. Neues Logo ersetzen:  images/hero.svg (EINE Datei: Hero, Navigation und Footer aller Seiten)"
+echo "  2. Stempelkarte PDF:    pdfs/stempelkarte-${CURRENT_YEAR}.pdf"
 echo "     → Neue PDF hochladen und in index.html Dateinamen anpassen"
 echo ""
-echo "Dann committen und pushen:"
+echo "Dann committen, pushen und per rsync live spielen (GitHub-Deploy ist deaktiviert):"
 echo "  git add -A && git commit -m 'Update auf ${NEW_NUM}. SOLSAM ${NEW_YEAR}' && git push"
+echo "  rsync -av --exclude '.git*' --exclude '.github' --exclude 'update.sh' ./ guede:/home/solinger-schneidwaren-samstag.de/public_html/"
+echo "  ssh guede chown -R solin6537:solin6537 /home/solinger-schneidwaren-samstag.de/public_html"
 echo ""
 echo "Das Deployment auf Hostinger erfolgt automatisch!"
 echo ""
