@@ -107,6 +107,11 @@ for f in $FILES; do
         # Kurzes Datum aktualisieren (z.B. 06.09.2025 → 05.09.2026)
         sed -i '' "s/${CURRENT_SHORT_DATE}/${NEW_SHORT_DATE}/g" "$f"
 
+        # ISO-Datum im Schema.org-Event (z.B. 2026-09-05T → 2027-09-04T)
+        CUR_ISO=$(echo "$CURRENT_SHORT_DATE" | awk -F. '{print $3"-"$2"-"$1}')
+        NEW_ISO=$(echo "$NEW_SHORT_DATE" | awk -F. '{print $3"-"$2"-"$1}')
+        sed -i '' "s/${CUR_ISO}T/${NEW_ISO}T/g" "$f"
+
         # Jahr in Config-Kommentar und Meta
         sed -i '' "s/Datum:         ${CURRENT_DATE}/Datum:         ${NEW_DATE}/g" "$f"
 
@@ -124,13 +129,12 @@ echo "Automatische Änderungen abgeschlossen!"
 echo ""
 echo "MANUELLE SCHRITTE:"
 echo "  1. Neues Logo ersetzen:  images/hero.svg (EINE Datei: Hero, Navigation und Footer aller Seiten)"
-echo "  2. Stempelkarte PDF:    pdfs/stempelkarte-${CURRENT_YEAR}.pdf"
-echo "     → Neue PDF hochladen und in index.html Dateinamen anpassen"
+echo "     ⚠ Die SVG vom Grafiker prüfen: 2027 fehlte der rote Punkt hinter der Zahl (als <circle> nachgesetzt)"
+echo "  2. Social-Vorschaubild:  images/og-image.jpg (1200×630, Logo auf #dfdfdf) aus hero.svg neu rendern"
+echo "  3. Stempelkarte:         pdfs/stempelkarte.pdf nur tauschen, wenn sich Stationen ändern (enthält kein Datum)"
 echo ""
 echo "Dann committen, pushen und per rsync live spielen (GitHub-Deploy ist deaktiviert):"
 echo "  git add -A && git commit -m 'Update auf ${NEW_NUM}. SOLSAM ${NEW_YEAR}' && git push"
 echo "  rsync -av --exclude '.git*' --exclude '.github' --exclude 'update.sh' ./ guede:/home/solinger-schneidwaren-samstag.de/public_html/"
 echo "  ssh guede chown -R solin6537:solin6537 /home/solinger-schneidwaren-samstag.de/public_html"
-echo ""
-echo "Das Deployment auf Hostinger erfolgt automatisch!"
 echo ""
